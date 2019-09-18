@@ -1,9 +1,9 @@
 import tkinter
 
-key = 0
+key = ""
 def key_down(e):
     global key
-    key = e.keycode
+    key = e.keysym
 
 def main_proc():
     label["text"] = key
