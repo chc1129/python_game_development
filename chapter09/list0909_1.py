@@ -148,12 +148,12 @@ def game_main():
         if 24 <= mouse_x and mouse_x < 24+72*8 and 24 <= mouse_y and mouse_y < 24+72*10:
             cursor_x = int((mouse_x-24)/72)
             cursor_y = int((mouse_y-24)/72)
-        if mouse_c == 1:
-            mouse_c = 0
-            set_neko()
-            neko[cursor_y][cursor_x] = tsugi
-            tsugi = 0
-            index = 2
+            if mouse_c == 1:
+                mouse_c = 0
+                set_neko()
+                neko[cursor_y][cursor_x] = tsugi
+                tsugi = 0
+                index = 2
         cvs.delete("CURSOR")
         cvs.create_image(cursor_x*72+60, cursor_y*72+60, image=cursor, tag="CURSOR")
         draw_neko()
@@ -168,7 +168,7 @@ def game_main():
     draw_txt("SCORE "+str(score), 160, 60, 32, "blue", "INFO")
     if tsugi > 0:
         cvs.create_image(752, 128, image=img_neko[tsugi], tag="INFO")
-        root.after(100, game_main)
+    root.after(100, game_main)
 
 root = tkinter.Tk()
 root.title("落ち物パズル「ねこねこ」")
