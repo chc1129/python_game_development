@@ -19,5 +19,6 @@ Chapter 10 Pygameの使い方
 Chapter 11 本格RPGを作ろう! 前編  
 Chapter 12 本格RPGを作ろう! 後編  
 Chapter 13 オブジェクト指向プログラミング  
+Appendix 池山高校Python研究部  
 
 ![pyGameDev](https://github.com/chc1129/image/blob/master/python_game_development/pyGameDev.png)
